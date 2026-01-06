@@ -3,73 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <title>Malla Zootecnia UNALM</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f6f3ff;
+      background: #f5f2ff;
       padding: 20px;
     }
+
     h1 {
       text-align: center;
-      color: #5a3ea1;
+      color: #4b3c88;
+      margin-bottom: 40px;
     }
+
     .ciclo {
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
+
     .ciclo h2 {
-      color: #3d2c8d;
+      color: #3f3277;
+      margin-bottom: 10px;
     }
+
     .malla {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
     }
+
     .curso {
       background: #ffd6e8;
-      border-radius: 10px;
-      padding: 10px;
+      border-radius: 12px;
+      padding: 12px;
       text-align: center;
       cursor: pointer;
       transition: 0.3s;
+      font-size: 14px;
     }
-    .curso.hecho {
+
+    .curso small {
+      display: block;
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    .curso.aprobado {
       background: #b8f2c9;
       text-decoration: line-through;
     }
+
+    .curso.cursando {
+      background: #fff1b8;
+    }
+
     .curso:hover {
       transform: scale(1.05);
     }
   </style>
 </head>
+
 <body>
 
-<h1>📚 Malla Curricular Zootecnia – UNALM</h1>
+<h1>Malla Curricular Zootecnia – UNALM (2019)</h1>
 
+<!-- CICLO 1 -->
 <div class="ciclo">
   <h2>Ciclo 1</h2>
   <div class="malla">
-    <div class="curso">Matemática Básica</div>
-    <div class="curso">Química General</div>
-    <div class="curso">Introducción a la Zootecnia</div>
-    <div class="curso">Comunicación</div>
+    <div class="curso">Matemática Básica <small>4 créditos</small></div>
+    <div class="curso">Química General <small>4 créditos</small></div>
+    <div class="curso">Introducción a la Zootecnia <small>3 créditos</small></div>
+    <div class="curso">Comunicación <small>3 créditos</small></div>
   </div>
 </div>
 
+<!-- CICLO 2 -->
 <div class="ciclo">
   <h2>Ciclo 2</h2>
   <div class="malla">
-    <div class="curso">Análisis Matemático I</div>
-    <div class="curso">Biología General</div>
-    <div class="curso">Estadística Básica</div>
-    <div class="curso">Metodología del Estudio</div>
+    <div class="curso">Análisis Matemático I <small>4 créditos</small></div>
+    <div class="curso">Biología General <small>4 créditos</small></div>
+    <div class="curso">Estadística Básica <small>3 créditos</small></div>
+    <div class="curso">Metodología del Estudio <small>2 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 3 -->
+<div class="ciclo">
+  <h2>Ciclo 3</h2>
+  <div class="malla">
+    <div class="curso">Análisis Matemático II <small>4 créditos</small></div>
+    <div class="curso">Química Orgánica <small>4 créditos</small></div>
+    <div class="curso">Física <small>4 créditos</small></div>
+    <div class="curso">Estadística Aplicada <small>3 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 4 -->
+<div class="ciclo">
+  <h2>Ciclo 4</h2>
+  <div class="malla">
+    <div class="curso">Bioquímica <small>4 créditos</small></div>
+    <div class="curso">Anatomía Animal <small>4 créditos</small></div>
+    <div class="curso">Microbiología <small>4 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 5 -->
+<div class="ciclo">
+  <h2>Ciclo 5</h2>
+  <div class="malla">
+    <div class="curso">Fisiología Animal <small>4 créditos</small></div>
+    <div class="curso">Nutrición Animal I <small>4 créditos</small></div>
+    <div class="curso">Genética <small>4 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 6 -->
+<div class="ciclo">
+  <h2>Ciclo 6</h2>
+  <div class="malla">
+    <div class="curso">Nutrición Animal II <small>4 créditos</small></div>
+    <div class="curso">Reproducción Animal <small>4 créditos</small></div>
+    <div class="curso">Mejoramiento Genético <small>4 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 7 -->
+<div class="ciclo">
+  <h2>Ciclo 7</h2>
+  <div class="malla">
+    <div class="curso">Producción de Bovinos <small>4 créditos</small></div>
+    <div class="curso">Producción de Aves <small>4 créditos</small></div>
+    <div class="curso">Sanidad Animal <small>4 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 8 -->
+<div class="ciclo">
+  <h2>Ciclo 8</h2>
+  <div class="malla">
+    <div class="curso">Producción Porcina <small>4 créditos</small></div>
+    <div class="curso">Producción de Ovinos y Caprinos <small>4 créditos</small></div>
+    <div class="curso">Economía Pecuaria <small>3 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 9 -->
+<div class="ciclo">
+  <h2>Ciclo 9</h2>
+  <div class="malla">
+    <div class="curso">Gestión de Empresas Pecuarias <small>4 créditos</small></div>
+    <div class="curso">Extensión Rural <small>3 créditos</small></div>
+    <div class="curso">Electivo I <small>3 créditos</small></div>
+  </div>
+</div>
+
+<!-- CICLO 10 -->
+<div class="ciclo">
+  <h2>Ciclo 10</h2>
+  <div class="malla">
+    <div class="curso">Electivo II <small>3 créditos</small></div>
+    <div class="curso">Seminario de Tesis <small>3 créditos</small></div>
+    <div class="curso">Prácticas Preprofesionales <small>6 créditos</small></div>
   </div>
 </div>
 
 <script>
-  const cursos = document.querySelectorAll(".curso");
-  cursos.forEach(curso => {
+  document.querySelectorAll(".curso").forEach(curso => {
     curso.addEventListener("click", () => {
-      curso.classList.toggle("hecho");
+      curso.classList.toggle("aprobado");
+      curso.classList.remove("cursando");
+    });
+
+    curso.addEventListener("dblclick", () => {
+      curso.classList.toggle("cursando");
+      curso.classList.remove("aprobado");
     });
   });
 </script>
