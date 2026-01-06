@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Zootecnia UNALM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f3ff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #5a3ea1;
+    }
+    .ciclo {
+      margin-bottom: 30px;
+    }
+    .ciclo h2 {
+      color: #3d2c8d;
+    }
+    .malla {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .curso {
+      background: #ffd6e8;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .curso.hecho {
+      background: #b8f2c9;
+      text-decoration: line-through;
+    }
+    .curso:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<h1>📚 Malla Curricular Zootecnia – UNALM</h1>
+
+<div class="ciclo">
+  <h2>Ciclo 1</h2>
+  <div class="malla">
+    <div class="curso">Matemática Básica</div>
+    <div class="curso">Química General</div>
+    <div class="curso">Introducción a la Zootecnia</div>
+    <div class="curso">Comunicación</div>
+  </div>
+</div>
+
+<div class="ciclo">
+  <h2>Ciclo 2</h2>
+  <div class="malla">
+    <div class="curso">Análisis Matemático I</div>
+    <div class="curso">Biología General</div>
+    <div class="curso">Estadística Básica</div>
+    <div class="curso">Metodología del Estudio</div>
+  </div>
+</div>
+
+<script>
+  const cursos = document.querySelectorAll(".curso");
+  cursos.forEach(curso => {
+    curso.addEventListener("click", () => {
+      curso.classList.toggle("hecho");
+    });
+  });
+</script>
+
+</body>
+</html>
