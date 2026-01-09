@@ -2,182 +2,138 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Malla Zootecnia UNALM</title>
+<title>Malla Curricular Zootecnia</title>
 
 <style>
-body {
+body{
   font-family: Arial, sans-serif;
-  background: #f5f2ff;
-  padding: 20px;
-  overflow-x: auto;
+  background:#f6f6f6;
+  padding:20px;
 }
 
-h1 {
-  text-align: center;
-  color: #4b3c88;
-  margin-bottom: 30px;
+.malla{
+  display:grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap:12px;
 }
 
-/* CONTENEDOR GENERAL */
-.malla-horizontal {
-  display: flex;
-  gap: 20px;
-  min-width: 1200px;
+.ciclo{
+  background:#ffffff;
+  border-radius:8px;
+  padding:10px;
 }
 
-/* CADA CICLO */
-.ciclo {
-  background: #ede9ff;
-  border-radius: 16px;
-  padding: 15px;
-  min-width: 230px;
-  flex-shrink: 0;
+.ciclo h3{
+  text-align:center;
+  font-size:14px;
+  margin-bottom:8px;
 }
 
-.ciclo h2 {
-  text-align: center;
-  color: #3f3277;
-  margin-bottom: 12px;
+.curso{
+  background:#e9e9e9;
+  border-radius:6px;
+  padding:6px;
+  margin-bottom:6px;
+  font-size:12px;
+  cursor:pointer;
 }
 
-/* CURSOS */
-.curso {
-  background: #ffd6e8;
-  border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.25s;
-  font-size: 14px;
+.curso small{
+  display:block;
+  font-size:10px;
 }
 
-.curso small {
-  display: block;
-  font-size: 12px;
-  opacity: 0.8;
-  margin-top: 4px;
+.curso.aprobado{
+  background:#b9e7c4;
 }
 
-.curso:hover {
-  transform: scale(1.03);
+.curso.cursando{
+  background:#ffe3a3;
 }
 
-.curso.aprobado {
-  background: #b8f2c9;
-  text-decoration: line-through;
-}
-
-.curso.cursando {
-  background: #fff1b8;
-}
-
-.curso.bloqueado {
-  background: #dcdcdc;
-  color: #777;
-  cursor: not-allowed;
+.curso.bloqueado{
+  background:#d3d3d3;
+  opacity:0.5;
+  cursor:not-allowed;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Malla Curricular Zootecnia – UNALM</h1>
+<h2>Malla Curricular – Zootecnia</h2>
 
-<div class="malla-horizontal">
+<div class="malla">
 
 <!-- CICLO 1 -->
 <div class="ciclo">
-<h2>Ciclo 1</h2>
-<div class="curso" data-id="eco">Ecología General<small>3 créditos</small></div>
-<div class="curso" data-id="qui">Química General<small>3 créditos</small></div>
-<div class="curso" data-id="soc">Sociedad y Cultura<small>2 créditos</small></div>
-<div class="curso" data-id="intro">Introducción a la Ciencia Animal<small>4 créditos</small></div>
-<div class="curso" data-id="am1">Análisis Matemático I<small>3 créditos</small></div>
-<div class="curso" data-id="bio">Biología General<small>4 créditos</small></div>
+  <h3>Ciclo 1</h3>
+  <div class="curso aprobado" data-id="mate1">Matemática Básica<small>4 créditos</small></div>
+  <div class="curso aprobado" data-id="quimica">Química General<small>4 créditos</small></div>
 </div>
 
 <!-- CICLO 2 -->
 <div class="ciclo">
-<h2>Ciclo 2</h2>
-<div class="curso bloqueado" data-id="qo" data-req="qui">Química Orgánica<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="bot" data-req="bio">Botánica General<small>4 créditos</small></div>
-<div class="curso" data-id="fis">Física General<small>3 créditos</small></div>
-<div class="curso" data-id="peru">Perú en el Contexto Internacional<small>2 créditos</small></div>
-<div class="curso" data-id="len">Lenguaje y Comunicación<small>2 créditos</small></div>
-<div class="curso bloqueado" data-id="am2" data-req="am1">Análisis Matemático II<small>3 créditos</small></div>
+  <h3>Ciclo 2</h3>
+  <div class="curso bloqueado" data-id="mate2" data-req="mate1">Matemática II<small>4 créditos</small></div>
+  <div class="curso bloqueado" data-id="organica" data-req="quimica">Química Orgánica<small>4 créditos</small></div>
 </div>
 
 <!-- CICLO 3 -->
 <div class="ciclo">
-<h2>Ciclo 3</h2>
-<div class="curso bloqueado" data-id="red" data-req="len">Redacción y Argumentación<small>2 créditos</small></div>
-<div class="curso bloqueado" data-id="est" data-req="am2">Estadística<small>3 créditos</small></div>
-<div class="curso bloqueado" data-id="eda" data-req="eco,qui">Edafología<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="anat" data-req="bio">Anatomía de los Animales de Granja<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="bioq" data-req="qo">Bioquímica para la Ciencia Animal<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="met" data-req="am2">Métodos de Investigación<small>3 créditos</small></div>
+  <h3>Ciclo 3</h3>
+  <div class="curso bloqueado" data-id="bio" data-req="organica">Biología<small>3 créditos</small></div>
 </div>
 
 <!-- CICLO 4 -->
 <div class="ciclo">
-<h2>Ciclo 4</h2>
-<div class="curso">Ética y Ciudadanía<small>3 créditos</small></div>
-<div class="curso bloqueado" data-id="inst" data-req="fis,intro">Diseño de Instalaciones Pecuarias<small>1 crédito</small></div>
-<div class="curso bloqueado" data-id="mest" data-req="est">Métodos Estadísticos Aplicados<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="gen" data-req="est,bioq,bio">Genética<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="fveg" data-req="bioq,bot">Fisiología Vegetal<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="fan" data-req="anat,bioq">Fisiología Animal<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="meto" data-req="est">Metodología de la Investigación<small>2 créditos</small></div>
+  <h3>Ciclo 4</h3>
+  <div class="curso bloqueado" data-id="fisiologia" data-req="bio">Fisiología Animal<small>4 créditos</small></div>
 </div>
-
-<!-- CICLO 5 -->
-<div class="ciclo">
-<h2>Ciclo 5</h2>
-<div class="curso" data-id="eco2">Economía General<small>3 créditos</small></div>
-<div class="curso bloqueado" data-id="mg1" data-req="mest,gen">Mejoramiento Genético I<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="ing" data-req="mest">Ingeniería de Procesos<small>3 créditos</small></div>
-<div class="curso bloqueado" data-id="rep" data-req="fan">Reproducción Animal<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="nut" data-req="fan">Nutrición Animal<small>4 créditos</small></div>
-<div class="curso bloqueado" data-id="agr" data-req="fan,eda">Agrotecnia<small>4 créditos</small></div>
-</div>
-
-<!-- CICLOS 6–10 -->
-<!-- (siguen igual, solo en columnas) -->
 
 </div>
 
 <script>
 const cursos = document.querySelectorAll(".curso");
 
-function actualizarBloqueos() {
-  cursos.forEach(curso => {
+function recalcularMalla(){
+  cursos.forEach(curso=>{
     const req = curso.dataset.req;
-    if (!req) return;
+    if(!req) return;
+
     const requisitos = req.split(",");
-    const cumplidos = requisitos.every(r =>
-      document.querySelector(`[data-id="${r}"]`)?.classList.contains("aprobado")
-    );
-    if (cumplidos) curso.classList.remove("bloqueado");
+    const desbloqueado = requisitos.every(r=>{
+      const cursoReq = document.querySelector(`[data-id="${r}"]`);
+      return cursoReq && cursoReq.classList.contains("aprobado");
+    });
+
+    if(desbloqueado){
+      curso.classList.remove("bloqueado");
+    }else{
+      curso.classList.add("bloqueado");
+      curso.classList.remove("aprobado","cursando");
+    }
   });
 }
 
-cursos.forEach(curso => {
-  curso.addEventListener("click", () => {
-    if (curso.classList.contains("bloqueado")) return;
+cursos.forEach(curso=>{
+  curso.addEventListener("click",()=>{
+    if(curso.classList.contains("bloqueado")) return;
+
     curso.classList.toggle("aprobado");
     curso.classList.remove("cursando");
-    actualizarBloqueos();
+    recalcularMalla();
   });
 
-  curso.addEventListener("dblclick", () => {
-    if (curso.classList.contains("bloqueado")) return;
+  curso.addEventListener("dblclick",()=>{
+    if(curso.classList.contains("bloqueado")) return;
+
     curso.classList.toggle("cursando");
     curso.classList.remove("aprobado");
   });
 });
 
-actualizarBloqueos();
+recalcularMalla();
 </script>
 
 </body>
